@@ -1,7 +1,8 @@
 # Pebble Health Export logger in PHP
 
 This is a simple PHP script to accept data from
-[pebble-health-export](https://github.com/faelys/pebble-health-export) by @faelys.
+[pebble-health-export](https://github.com/faelys/pebble-health-export) by 
+[@faelys](https://github.com/faelys).
 
 ## Configuration
 
@@ -15,7 +16,7 @@ the options at the top of the script.
 * $delimiter
   This is the value you entered in the `Line Separator` field in the Pebble app.
 
-## Sample Output
+## Sample Response
 
 ```js
 {
@@ -28,4 +29,12 @@ the options at the top of the script.
   "endTime": "2016-08-06T16:20:56Z",
   "message": "Processed 2 records in 1.414ms."
 }
+```
+
+## Sample output file
+
+```
+Time,Steps,yaw,pitch,VMC,ambient light,activity level
+2016-08-06T16:43:00Z,0,13,8,0,1,0
+
 ```
