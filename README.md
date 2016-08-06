@@ -15,6 +15,8 @@ the options at the top of the script.
   This is the value you entered in the `Data Field Name` in the Pebble app.
 * $delimiter
   This is the value you entered in the `Line Separator` field in the Pebble app.
+* $csv_header
+  This is the CSV headers.
 
 ## Sample Response
 

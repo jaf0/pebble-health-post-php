@@ -18,6 +18,11 @@ $bundle_key = "bundle";
 // delimiter
 $delimiter = "%0d%0a";
 
+// CSV header
+$csv_header = "Time,Steps,yaw,pitch,VMC,ambient light,activity level\n";
+
+// end config options
+
 // date format for output JSON, not pebble health data.
 $date_format = "Y-m-d\TH:i:s\Z";
 
@@ -29,8 +34,7 @@ if (isset($_POST[$single_key]) || isset($_POST[$bundle_key])) {
     // if this is the first export
     if ($response['create'] = !file_exists($datafile)) {
         // include CSV headers.
-        $header = "Time,Steps,yaw,pitch,VMC,ambient light,activity level\n";
-        file_put_contents($datafile, $header, FILE_APPEND | LOCK_EX);
+        file_put_contents($datafile, $csv_header, FILE_APPEND | LOCK_EX);
     }
 
     // handle bundle data
